@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{687BD7B2-AF40-4349-8A26-FF1BFB592A24}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gdsDataHelp</RootNamespace>
+    <AssemblyName>gdsDataHelp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\tfs\产品研发中心\02产品\04WFP平台\03研发库\源码\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\DALCMS.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNews.Designer.cs">
+      <DependentUpon>frmNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm.Designer.cs">
+      <DependentUpon>MDIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCNewList1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCNewList1.Designer.cs">
+      <DependentUpon>UCNewList1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCNewsAddUrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCNewsAddUrl.Designer.cs">
+      <DependentUpon>UCNewsAddUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSpecialAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSpecialAdd.Designer.cs">
+      <DependentUpon>UCSpecialAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSpecialList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSpecialList.Designer.cs">
+      <DependentUpon>UCSpecialList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSpeVod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSpeVod.Designer.cs">
+      <DependentUpon>UCSpeVod.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNews.resx">
+      <DependentUpon>frmNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm.resx">
+      <DependentUpon>MDIForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UCNewList1.resx">
+      <DependentUpon>UCNewList1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCNewsAddUrl.resx">
+      <DependentUpon>UCNewsAddUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSpecialAdd.resx">
+      <DependentUpon>UCSpecialAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSpecialList.resx">
+      <DependentUpon>UCSpecialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSpeVod.resx">
+      <DependentUpon>UCSpeVod.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\phpCSBase\phpCSBase.csproj">
+      <Project>{dc2d01d5-2ec5-4678-8073-844cbea5da11}</Project>
+      <Name>phpCSBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Crop Circle 1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Crop Circle 2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Crop Circle 3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Crop Circle 4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Crop Circle 5.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

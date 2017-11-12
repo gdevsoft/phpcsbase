@@ -1,0 +1,7 @@
+E:\z_编程学习\cwfDataHelp\phpCSBase\bin\Debug\phpCSBase.dll.config
+E:\z_编程学习\cwfDataHelp\phpCSBase\bin\Debug\phpCSBase.dll
+E:\z_编程学习\cwfDataHelp\phpCSBase\bin\Debug\phpCSBase.pdb
+E:\z_编程学习\cwfDataHelp\phpCSBase\obj\Debug\phpCSBase.csprojResolveAssemblyReference.cache
+E:\z_编程学习\cwfDataHelp\phpCSBase\obj\Debug\phpCSBase.dll
+E:\z_编程学习\cwfDataHelp\phpCSBase\obj\Debug\phpCSBase.pdb
+E:\z_编程学习\cwfDataHelp\phpCSBase\bin\Debug\Newtonsoft.Json.dll

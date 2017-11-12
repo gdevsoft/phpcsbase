@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://localhost/soap/cwf_service" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://localhost/soap/cwf_service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://localhost/soap/cwf_service">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="job_dataentryRequest">
+    <wsdl:part name="name" type="xsd:string" />
+    <wsdl:part name="args" type="xsd:string" />
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="appkey" type="xsd:string" />
+    <wsdl:part name="signed" type="xsd:string" />
+    <wsdl:part name="updata" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="job_dataentryResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="cwf_servicePortType">
+    <wsdl:operation name="job_dataentry">
+      <documentation>A web method of data</documentation>
+      <wsdl:input message="tns:job_dataentryRequest" />
+      <wsdl:output message="tns:job_dataentryResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="cwf_serviceBinding" type="tns:cwf_servicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="job_dataentry">
+      <soap:operation soapAction="http://localhost/cwfapi/api.php/job_dataentry" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.w1tj.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.w1tj.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="cwf_service">
+    <wsdl:port name="cwf_servicePort" binding="tns:cwf_serviceBinding">
+      <soap:address location="http://localhost:82/cwfapi/api.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

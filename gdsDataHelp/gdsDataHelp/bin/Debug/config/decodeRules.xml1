@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <wzconfig>
+    <name>www.yidianzixun.com</name>
+    <ctype>title</ctype>
+    <seat />
+    <topstr>&lt;h2&gt;</topstr>
+    <endstr>&lt;/h2&gt;</endstr>
+  </wzconfig>
+  <wzconfig>
+    <name>www.yidianzixun.com</name>
+    <ctype>subject</ctype>
+    <seat>&lt;body&gt;</seat>
+    <topstr>&lt;body&gt;</topstr>
+    <endstr>&lt;/body&gt;</endstr>
+  </wzconfig>
+</DocumentElement>
